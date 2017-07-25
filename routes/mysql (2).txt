@@ -1,0 +1,41 @@
+
+
+1=>企业/公司/机构
+2=>个人
+3=>在线商城
+4=>一页式网站
+5=>设计风格
+
+app.use('/login', login);
+app.use('/sec', sec);
+app.use('/search', search);
+app.use('/all', allcon);
+app.use('/first', first);
+
+
+CREATE TABLE `contain` (
+  `uid` int(11) NOT NULL auto_increment,
+  `name` varchar(999) default NULL,
+  `url` varchar(999) default NULL,
+  `image` varchar(999) default NULL,
+  `author` varchar(999) default NULL,
+  `time` time default NULL,
+  `oid` int(11) default NULL,
+  PRIMARY KEY  (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+
+CREATE TABLE `liaese` (
+  `uid` int(11) NOT NULL auto_increment,
+  `oid` int(99) default NULL,
+  `name` varchar(999) default NULL,
+  PRIMARY KEY  (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+
+
+CREATE TABLE `list` (
+  `uid` int(11) NOT NULL auto_increment,
+  `name` varchar(9999) default NULL,
+  PRIMARY KEY  (`uid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8

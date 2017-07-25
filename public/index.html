@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>express</title>
+	<script type="text/javascript" src="javascripts/jquery-2.0.0.min.js"></script>
+</head>
+<body>
+	<input type="file" id="pickfiles" name="importFile" onchange="setFiles(this)" value="select files" /><br/>
+	<input type="button" id="uploadfiles" value="注册" />
+	<div id="List"></div>
+	<script type="text/javascript">
+		/*var str='http://localhost:8002'
+		$.ajax({
+			type:"post",
+			url:str+"/new/newss",
+			data:{
+				name:"小花"
+			},
+			success:function(da){
+				console.log(da)
+			}
+		})*/
+// 	var str = 'http://localhost:8002'
+// 	var files;
+// 	var fil = '';
+// 	var arr=[];
+//     var setFiles=function(element){
+//   		//fil = element.files[0].name
+//   		//console.log(element.files[0].name)
+// ////$('#img').html('<img src="'+$('#pickfiles').val()+'">')
+// //		console.log(element.value)  //获取到选取的图片
+//         files=element.files[0];
+//     }
+//     $("#uploadfiles").click(function(){
+//     	var fd = new FormData();
+//         fd.append("uploadedFile", files);
+//         $.ajax({
+//             url:str+"/new/newss",
+//             type:"post",
+//             data:fd,
+//             contentType: false,
+//             processData: false,
+//             success:function(data){
+//                 console.log('data:'+data);
+//             },
+//             error:function(){
+//                 console.log("上传图片错了！");
+//             }
+//         })
+//     });
+   $.ajax({
+   			type: 'get',
+            url: 'http://localhost:8282/demod/demo',
+            success: function (da) {
+                console.log(da)
+            }
+   })
+	</script>
+</body>
+</html>
