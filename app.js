@@ -15,7 +15,9 @@ var first = require('./routes/firstlist');
 var login = require('./routes/login');
 var search = require('./routes/search');
 var sec = require('./routes/Seclogin');
-
+var wabout=require('./routes/wabout')
+var wabout2=require('./routes/wabout2')
+var wabout3=require('./routes/wabout3')
 var app = express();
 
 // view engine setup
@@ -41,6 +43,9 @@ app.use('/search', search);
 app.use('/all', allcon);
 app.use('/first', first);
 
+app.use('/wabout',wabout)
+app.use('/wabout2',wabout2)
+app.use('/wabout3',wabout3)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
